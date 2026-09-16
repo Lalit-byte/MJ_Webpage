@@ -1,0 +1,81 @@
+/* ++++++++++++ CHAPTER 3 (Workin' Day and Night) +++++++++++++ */
+
+.c3 {
+    position: sticky;
+    z-index: 3;
+    background-color: #ef5858;
+    color: #1a0808;
+    min-height: 100vh;
+    padding: 100px 60px 140px;
+    box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.c3-title {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.c3-title h1 {
+    font-family: var(--font-primary);
+    font-size: clamp(3.2rem, 9vw, 7.5rem);
+    font-weight: 700;
+    line-height: 0.92;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1a0808;
+}
+
+.c3-content {
+    display: grid;
+    grid-template-columns: 320px 1fr 1fr;
+    gap: 45px;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.c3-figure {
+    position: sticky;
+    top: 40px;
+    align-self: start;
+}
+
+.c3-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+    display: block;
+}
+
+.c3-col-left,
+.c3-col-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.c3-col-left p,
+.c3-col-right p {
+    font-size: 1.06rem;
+    line-height: 1.85;
+    color: #2b0d0d;
+}
+
+@media (max-width: 768px) {
+
+ .c3 {
+        padding: 60px 20px 80px;
+    }
+
+    .c3-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}    

@@ -1,0 +1,110 @@
+/* 1. HERO CONTAINER (Full viewport flex column) */
+.hero {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 600px;
+    padding: 30px 0 20px 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+}
+
+/* 2. CENTERED TEXT BLOCK (Takes all available middle space) */
+.hero-content {
+    flex: 1;
+    /* Expands to fill vertical space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centers vertically */
+    align-items: center;
+    /* Centers horizontally */
+    text-align: center;
+    gap: 16px;
+    padding: 0 20px;
+}
+
+.hero-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.hero-title {
+    font-family: var(--font-primary);
+    font-size: clamp(3rem, 9.5vw, 7.5rem);
+    /* Responsive fluid typography */
+    line-height: 0.92;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.hero-dates {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+/* 3. PINNED BOTTOM CHAPTERS (Pushed down by margin-top: auto) */
+.hero-chapters {
+    margin-top: auto;
+    /* Pushes the gallery to the bottom */
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 20px 40px;
+    overflow-x: auto;
+    z-index: 20;
+
+    /* Smooth scroll + hide browser scrollbars */
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.hero-chapters::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.chapter-item {
+    flex-shrink: 0;
+    /* Prevents cards from getting squeezed */
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.chapter-item:hover {
+    transform: translateY(-8px);
+}
+
+.chapter-item img {
+    height: 140px;
+    width: auto;
+    display: block;
+    /* border-radius: 6px; */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.chapter-item span {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin-top: 8px;
+    text-transform: uppercase;
+    color: #777;
+}
+

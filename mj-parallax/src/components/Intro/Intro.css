@@ -1,0 +1,82 @@
+/* ++++++++++++ C1 SECTION (Sticky Parallax Layout) +++++++++++++ */
+
+.c1 {
+    position: relative;
+    z-index: 1;
+    background-color: #b4c873;
+    min-height: 100vh;
+}
+
+.c1-layout {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 100%;
+    position: relative;
+}
+
+.c1-left {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 50px;
+}
+
+.c1-left img {
+    height: 250px;
+    width: auto;
+    object-fit: contain;
+    align-self: flex-start;
+}
+
+.c1-left h1 {
+    font-family: var(--font-primary);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    line-height: 1.2;
+    font-weight: 700;
+    color: #1b220a;
+}
+
+.c1-right {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 60px 50px 120px 20px;
+}
+
+.c1-right img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.c1-right p {
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: #262e12;
+}
+
+@media (max-width: 768px) {
+
+    .c1-layout,
+    .c2-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .c1-left,
+    .c2-right {
+        position: static;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .c1-right,
+    .c2-left {
+        padding: 20px;
+    }
+}

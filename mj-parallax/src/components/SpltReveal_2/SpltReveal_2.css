@@ -1,0 +1,131 @@
+/* ++++++++++++ CHAPTER 5 (Split Parallax Section - BAD Era) +++++++++++++ */
+
+.split-parallax-section {
+    position: relative;
+    z-index: 5;
+    height: 250vh; /* Scroll runway for slide-in + internal parallax */
+    background-color: #060709;
+    overflow: clip;
+    view-timeline-name: --c5Timeline;
+    view-timeline-axis: block;
+}
+
+.split-parallax-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.parallax-half {
+    position: absolute;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.parallax-half-left {
+    left: 0;
+    transform: translateX(-100%);
+    animation: parallaxSlideLeft linear both;
+    animation-timeline: --c5Timeline;
+    animation-range: entry 0% contain 45%;
+}
+
+.parallax-half-right {
+    right: 0;
+    transform: translateX(100%);
+    animation: parallaxSlideRight linear both;
+    animation-timeline: --c5Timeline;
+    animation-range: entry 0% contain 45%;
+}
+
+@keyframes parallaxSlideLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes parallaxSlideRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Inner Image with vertical parallax depth */
+.parallax-img-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax-img-inner img {
+    position: absolute;
+    top: -15%;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    will-change: transform;
+    animation: innerImageParallax linear both;
+    animation-timeline: --c5Timeline;
+    animation-range: contain 10% exit 100%;
+    transition: filter 0.5s ease;
+    cursor: pointer;
+}
+
+.parallax-half:hover .parallax-img-inner img {
+    filter: brightness(1.1) contrast(1.04);
+}
+
+@keyframes innerImageParallax {
+    from {
+        transform: translateY(0) scale(1.05);
+    }
+    to {
+        transform: translateY(15%) scale(1);
+    }
+}
+
+
+@media (max-width: 768px) {
+     .split-parallax-section {
+        height: auto;
+    }
+
+    .split-parallax-sticky {
+        position: static;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .parallax-half {
+        position: static;
+        width: 100vw;
+        height: 50vh;
+        transform: none !important;
+        animation: none;
+    }
+
+    .parallax-img-inner img {
+        position: static;
+        height: 100%;
+        animation: none;
+        transform: none !important;
+    }
+
+}

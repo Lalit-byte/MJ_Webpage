@@ -1,0 +1,282 @@
+/* ++++++++++++ CHAPTER 4 (Horizontal Scroll Section - Thriller) +++++++++++++ */
+
+.c4 {
+    position: relative;
+    z-index: 4;
+    height: 400vh; /* Drives the horizontal scroll smoothly across 400vh */
+    background: radial-gradient(circle at 10% 20%, #1a0f12 0%, #0a0b0e 60%, #050608 100%);
+    color: #f5f5f7;
+    box-shadow: 0 -25px 60px rgba(0, 0, 0, 0.5);
+    view-timeline-name: --c4Timeline;
+    view-timeline-axis: block;
+}
+
+.c4-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.c4-track {
+    display: flex;
+    height: 100vh;
+    width: max-content;
+    align-items: center;
+    padding: 0 8vw;
+    gap: 40px;
+    will-change: transform;
+    animation: c4HorizontalScroll linear both;
+    animation-timeline: --c4Timeline;
+    animation-range: contain 0% contain 100%;
+}
+
+@keyframes c4HorizontalScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% + 100vw));
+    }
+}
+
+/* Base Card Style */
+.c4-card {
+    flex-shrink: 0;
+    width: 420px;
+    height: 72vh;
+    min-height: 520px;
+    background: rgba(25, 27, 34, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.c4-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(239, 88, 88, 0.4);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 25px rgba(239, 88, 88, 0.15);
+}
+
+.c4-card-wide {
+    width: 540px;
+}
+
+/* Card Image Wrap */
+.c4-card-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 58%;
+    overflow: hidden;
+    background-color: #121318;
+}
+
+.c4-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    display: block;
+}
+
+.c4-card:hover .c4-card-img-wrap img {
+    transform: scale(1.06);
+}
+
+.c4-card-number {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+/* Card Content */
+.c4-card-content {
+    flex: 1;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.c4-card-content h3 {
+    font-family: var(--font-primary);
+    font-size: 1.45rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+}
+
+.c4-card-content p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #a0a5b5;
+}
+
+/* 1. Intro Card */
+.c4-intro-card {
+    width: 460px;
+    background: linear-gradient(145deg, rgba(38, 16, 20, 0.85) 0%, rgba(18, 19, 24, 0.9) 100%);
+    border: 1px solid rgba(239, 88, 88, 0.25);
+    padding: 48px 36px;
+    justify-content: space-between;
+}
+
+.c4-tag {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: #ef5858;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.c4-title {
+    font-family: var(--font-primary);
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 0.95;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 15px 0;
+}
+
+.c4-title span {
+    color: #ef5858;
+    text-shadow: 0 0 30px rgba(239, 88, 88, 0.4);
+}
+
+.c4-desc {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #c4c8d4;
+}
+
+.c4-scroll-hint {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    color: #ef5858;
+    text-transform: uppercase;
+}
+
+.c4-arrow {
+    font-size: 1.2rem;
+    animation: bounceArrow 1.6s infinite ease-in-out;
+}
+
+@keyframes bounceArrow {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(8px); }
+}
+
+/* 6. Stat Card */
+.c4-stat-card {
+    width: 440px;
+    background: linear-gradient(135deg, rgba(239, 88, 88, 0.15) 0%, rgba(18, 19, 24, 0.85) 100%);
+    border: 1px solid rgba(239, 88, 88, 0.3);
+    padding: 44px 34px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.c4-stat-badge {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: #ef5858;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(239, 88, 88, 0.12);
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+}
+
+.c4-stat-big {
+    font-family: var(--font-primary);
+    font-size: clamp(3.5rem, 7vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1;
+    color: #ffffff;
+    letter-spacing: 2px;
+    background: linear-gradient(180deg, #ffffff 40%, #ef5858 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.c4-stat-label {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 16px 0 12px;
+}
+
+.c4-stat-text {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #9fa5b5;
+}
+
+
+@media (max-width: 768px) {
+    .c4 {
+        height: auto;
+    }
+
+    .c4-sticky {
+        position: static;
+        height: auto;
+    }
+
+    .c4-track {
+        height: auto;
+        padding: 60px 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        animation: none;
+        transform: none !important;
+        scrollbar-width: none;
+    }
+
+    .c4-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    .c4-card {
+        scroll-snap-align: center;
+        width: 82vw;
+        height: 65vh;
+        min-height: 460px;
+    }
+
+    .c4-card-wide {
+        width: 82vw;
+    }
+}
