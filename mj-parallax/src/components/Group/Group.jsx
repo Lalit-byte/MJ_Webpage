@@ -82,7 +82,7 @@ const Group = () => {
                         src="/Group-chapt2(1).webp"
                         alt="Young Michael Jackson" loading="lazy"/>
                     <img className="c2-main-img slide-2"
-                        src="group_left_img2.webp"
+                        src="/group_left_img2.webp"
                         alt="Michael Jackson Motown Era" loading="lazy"/>
                     <img className="c2-main-img slide-3"
                         src="/group_right_3.webp"

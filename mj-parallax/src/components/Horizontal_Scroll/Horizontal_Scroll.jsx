@@ -64,7 +64,7 @@ const Horizontal_Scroll = () => {
                 {/* <!-- 5. Grammy Record Card --> */}
                 <div className="c4-card">
                     <div className="c4-card-img-wrap">
-                        <SkeletonImage src="/Group-chapt2.png" alt="Grammy Awards Record" loading="lazy"/>
+                        <SkeletonImage src="/Group-chapt2.webp" alt="Grammy Awards Record" loading="lazy"/>
                         <span className="c4-card-number">04</span>
                     </div>
                     <div className="c4-card-content">
