@@ -1,5 +1,6 @@
 import "./Solo.css"
 
+
 const Solo = () => {
   return (
     <>
@@ -11,7 +12,7 @@ const Solo = () => {
 
         <div className="c3-content">
             <figure className="c3-figure">
-                <img src="https://mj.kevinlagier.com/images/chapter-3/chapt3-image-1.png"
+                <img src="/Intro-chapt1.webp"
                     alt="Michael Jackson Off the Wall Era"/>
             </figure>
 

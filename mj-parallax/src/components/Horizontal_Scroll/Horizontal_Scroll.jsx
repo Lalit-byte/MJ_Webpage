@@ -1,10 +1,13 @@
 import "./Horizontal_Scroll.css"
+import SkeletonImage from "../Skeleton/SkeletonImage";
 
 
 const Horizontal_Scroll = () => {
+
   return (
     <>
        {/* <!-- ++++++++++++ CHAPTER 4 (Horizontal Scroll Section - Thriller) +++++++++++++ --> */}
+
     <section className="c4">
         <div className="c4-sticky">
             <div className="c4-track">
@@ -25,7 +28,7 @@ const Horizontal_Scroll = () => {
                 {/* <!-- 2. Billie Jean Card --> */}
                 <div className="c4-card">
                     <div className="c4-card-img-wrap">
-                        <img src="https://mj.kevinlagier.com/images/chapter-4/chapt4-image-1.png" alt="Billie Jean and the Moonwalk" loading="lazy"/>
+                        <SkeletonImage src="/Intro-chapt1.webp" alt="Billie Jean and the Moonwalk"loading="lazy"/>
                         <span className="c4-card-number">01</span>
                     </div>
                     <div className="c4-card-content">
@@ -37,7 +40,7 @@ const Horizontal_Scroll = () => {
                 {/* <!-- 3. Beat It Card --> */}
                 <div className="c4-card">
                     <div className="c4-card-img-wrap">
-                        <img src="https://mj.kevinlagier.com/images/chapter-4/chapt4-image-2.png" alt="Beat It Music Video" loading="lazy"/>
+                        <SkeletonImage src="group_left_3.webp" alt="Beat It Music Video"loading="lazy"/>
                         <span className="c4-card-number">02</span>
                     </div>
                     <div className="c4-card-content">
@@ -49,7 +52,7 @@ const Horizontal_Scroll = () => {
                 {/* <!-- 4. Thriller Short Film Card --> */}
                 <div className="c4-card c4-card-wide">
                     <div className="c4-card-img-wrap">
-                        <img src="https://mj.kevinlagier.com/images/chapter-4/chapt4-image-3.png" alt="Thriller 14-Minute Film" loading="lazy"/>
+                        <SkeletonImage src="group_right_3.webp" alt="Thriller 14-Minute Film" loading="lazy"/>
                         <span className="c4-card-number">03</span>
                     </div>
                     <div className="c4-card-content">
@@ -61,7 +64,7 @@ const Horizontal_Scroll = () => {
                 {/* <!-- 5. Grammy Record Card --> */}
                 <div className="c4-card">
                     <div className="c4-card-img-wrap">
-                        <img src="https://mj.kevinlagier.com/images/chapter-4/chapt4-image-4.png" alt="Grammy Awards Record" loading="lazy"/>
+                        <SkeletonImage src="/Group-chapt2.png" alt="Grammy Awards Record" loading="lazy"/>
                         <span className="c4-card-number">04</span>
                     </div>
                     <div className="c4-card-content">

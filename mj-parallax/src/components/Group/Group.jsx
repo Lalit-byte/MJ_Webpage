@@ -1,4 +1,6 @@
 import "./Group.css"
+import SkeletonImage from "../Skeleton/SkeletonImage";
+
 const Group = () => {
   return (
     <>
@@ -29,9 +31,9 @@ const Group = () => {
                 </p>
 
                 <div className="c2-left-img">
-                    <img src="https://mj.kevinlagier.com/images/chapter-2/chapt2-image-1.png"
+                    <SkeletonImage src="/group_left_img2.webp"
                         alt="Jackson 5 Early Days"/>
-                    <img src="https://mj.kevinlagier.com/images/chapter-2/chapt2-image-2.png" alt="Jackson 5 Rehearsal"/>
+                    <SkeletonImage src="/group_left_3.webp" loading ="lazy"/>
                 </div>
 
                 <p>
@@ -57,7 +59,7 @@ const Group = () => {
                 </p>
 
                 <div className="c2-left-img">
-                    <img src="https://mj.kevinlagier.com/images/chapter-2/chapt2-image-3.png" alt="Jackson 5 on Tour"/>
+                    <SkeletonImage src="/group_left_3.webp" alt="Jackson 5 on Tour"/>
                 </div>
 
                 <p>
@@ -77,13 +79,13 @@ const Group = () => {
             <div className="c2-right">
                 <div className="c2-image-slider">
                     <img className="c2-main-img slide-1"
-                        src="https://mj.kevinlagier.com/images/chapter-2/chapt2-image-4.png"
+                        src="/Group-chapt2(1).webp"
                         alt="Young Michael Jackson" loading="lazy"/>
                     <img className="c2-main-img slide-2"
-                        src="https://mj.kevinlagier.com/images/chapter-2/chapt2-image-2.png"
+                        src="group_left_img2.webp"
                         alt="Michael Jackson Motown Era" loading="lazy"/>
                     <img className="c2-main-img slide-3"
-                        src="https://mj.kevinlagier.com/images/chapter-2/chapt2-image-3.png"
+                        src="/group_right_3.webp"
                         alt="Michael Jackson Jackson 5 Era" loading="lazy"/>
                 </div>
             </div>

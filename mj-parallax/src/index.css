@@ -20,3 +20,23 @@ body {
     overflow-x: clip;
 }
 
+
+/* ++++++++++++ Image loading skeleton (SkeletonImage component) ++++++++++++ */
+.skeleton-image {
+    position: relative;
+    display: block;
+}
+
+.skeleton-image.is-loading img {
+    visibility: hidden;
+}
+
+.skeleton-image-placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: inherit;
+}
+

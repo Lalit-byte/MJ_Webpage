@@ -10,7 +10,7 @@ const Chapter06 = () => {
             <h1>DANGEROUS<br/><span>& HEAL THE WORLD</span></h1>
             <p class="c6-subtitle">1991 — 1995 • NEW JACK SWING & GLOBAL HUMANITARIAN EFFORTS</p>
         </div>
-
+        
         <div class="c6-layout">
             <div class="c6-left">
                 <div class="c6-sticky-box">

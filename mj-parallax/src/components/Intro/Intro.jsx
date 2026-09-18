@@ -1,4 +1,5 @@
 import "./Intro.css"
+import SkeletonImage from "../Skeleton/SkeletonImage"
 const Intro = () => {
   return (
     <>
@@ -8,7 +9,7 @@ const Intro = () => {
 
             <div className="c1-left">
 
-                <img src="https://mj.kevinlagier.com/images/chapter-1/chapt1-image-1.png" alt="Chapter 6"/>
+                <SkeletonImage src="/Intro-chapt1.webp" alt="Chapter 6"/>
 
                 <h1>Known as the "King of Pop," Michael Jackson, american singer, songwriter, and dancer, was the most
                     popular entertainer in the world in the early and mid‑1980s.</h1>
@@ -33,7 +34,7 @@ const Intro = () => {
                     </p>
                 </div>
 
-                <img src="https://mj.kevinlagier.com/images/chapter-1/chapt1-image-2.png" alt="Chapter 6"/>
+                <SkeletonImage src="/group_right_3.webp" alt="Chapter 6"/>
 
                 <p>Almost all of Jackson's siblings made marks in the music industry, including Rebbie, Jackie, Tito,
                     Jermaine, La Toya, Marlon, Randy, and Janet Jackson. His brother Brandon, Marlon's twin, died

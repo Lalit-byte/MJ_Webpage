@@ -37,6 +37,25 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
+/* SkeletonImage wrapper + its inner img follow the same sizing as plain imgs */
+.c2-left-img .skeleton-image {
+    width: 100%;
+    max-width: 48%;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.c2-left-img .skeleton-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+.c2-left-img .skeleton-image:only-child {
+    max-width: 100%;
+}
+
 .c2-left-img img:only-child {
     max-width: 100%;
 }
